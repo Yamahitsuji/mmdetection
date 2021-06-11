@@ -1,5 +1,10 @@
 _base_ = ['./ssd300_voc0712.py']
 data_root = 'data/VOCdevkit/'
+model = dict(
+    bbox_head=dict(
+        num_classes=1
+    )
+)
 data = dict(
     train=dict(
         times=3,
